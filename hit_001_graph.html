@@ -124,6 +124,7 @@ function yearChanged(v) {
   document.getElementById('ylabel').textContent = v;
   show(current);
 }
-show(1);
+const urlDepth = Number(new URLSearchParams(window.location.search).get('depth'));
+show(RAW[urlDepth] ? urlDepth : 1);
 </script>
 </body></html>
